@@ -35,9 +35,6 @@ BlogPost.propTypes = {
   editBlog: PropTypes.editBlog,
 };
 
-
-
-
 export default BlogPost;
 
 

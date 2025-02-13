@@ -52,13 +52,20 @@ title="Click to select a date"
 <CalendarMonthIcon className="absolute top-1/2 -translate-y-1/2 left-2 text-white" />
 </div>
 </div>
-        <input
+<select
           value={day}
           onChange={(e) => setDay(e.target.value)}
           className="border-2 border-white p-2 outline-none rounded-md"
-          type="text"
-          placeholder="Day"
-        />
+        >
+          <option className="text-black" value="">Select Day</option>
+          <option className="text-black" value="Monday">Monday</option>
+          <option className="text-black" value="Tuesday">Tuesday</option>
+          <option className="text-black" value="Wednesday">Wednesday</option>
+          <option className="text-black" value="Thursday">Thursday</option>
+          <option className="text-black" value="Friday">Friday</option>
+          <option className="text-black" value="Saturday">Saturday</option>
+          <option className="text-black" value="Sunday">Sunday</option>
+        </select>
         
         <label className="border-2 border-white p-2 outline-none rounded-md cursor-pointer">
           <input
