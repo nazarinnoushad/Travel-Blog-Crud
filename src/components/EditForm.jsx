@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 const EditForm = ({ item, updateBlog }) => {
   const [title, setTitle] = useState(item.title);
@@ -38,12 +39,19 @@ const EditForm = ({ item, updateBlog }) => {
           className="border-2 border-white p-2 outline-none rounded-md"
           placeholder="Description"
         />
-        <input
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          className="border-2 border-white p-2 outline-none rounded-md"
-          type="date"
-        />
+        <div className="flex flex-col gap-2">
+<div className="relative">
+<input
+id="date-picker"
+value={date}
+onChange={(e) => setDate(e.target.value)}
+className="border-2 border-white p-2 outline-none rounded-md bg-transparent text-white w-full pl-10"
+type="date"
+title="Click to select a date"
+/>
+<CalendarMonthIcon className="absolute top-1/2 -translate-y-1/2 left-2 text-white" />
+</div>
+</div>
         <input
           value={day}
           onChange={(e) => setDay(e.target.value)}
