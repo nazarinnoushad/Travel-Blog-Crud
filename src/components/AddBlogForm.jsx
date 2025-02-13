@@ -66,12 +66,13 @@ const AddBlogForm = ({ addBlog }) => {
           className="border-2 border-white p-2 outline-none rounded-md"
           placeholder="Description"
         />
-        <input
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          className="border-2 border-white p-2 outline-none rounded-md"
-          type="date"
-        />
+  <input
+  value={date}
+  onChange={(e) => setDate(e.target.value)}
+  className="border-2 border-white p-2 outline-none rounded-md"
+  type="date"
+  title="Click to select a date"
+/>
         <select
           value={day}
           onChange={(e) => setDay(e.target.value)}
