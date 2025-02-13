@@ -67,19 +67,19 @@ const AddBlogForm = ({ addBlog }) => {
           className="border-2 border-white p-2 outline-none rounded-md"
           placeholder="Description"
         />
-      <div className="flex flex-col gap-2">
-  <label htmlFor="date-picker" className="text-white">Select a Date</label>
-  <div className="relative">
-    <input 
-      id="date-picker" 
-      value={date} 
-      onChange={(e) => setDate(e.target.value)} 
-      className="border-2 border-white p-2 outline-none rounded-md bg-transparent text-white w-full pl-10" 
-      type="date" 
-      title="Click to select a date" 
-    />
-    <CalendarMonthIcon className="absolute top-1/2 -translate-y-1/2 left-2 text-white" />
-  </div>
+ 
+<div className="flex flex-col gap-2">
+<div className="relative">
+<input
+id="date-picker"
+value={date}
+onChange={(e) => setDate(e.target.value)}
+className="border-2 border-white p-2 outline-none rounded-md bg-transparent text-white w-full pl-10"
+type="date"
+title="Click to select a date"
+/>
+<CalendarMonthIcon className="absolute top-1/2 -translate-y-1/2 left-2 text-white" />
+</div>
 </div>
         <select
           value={day}
