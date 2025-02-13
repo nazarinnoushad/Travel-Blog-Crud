@@ -66,13 +66,19 @@ const AddBlogForm = ({ addBlog }) => {
           className="border-2 border-white p-2 outline-none rounded-md"
           placeholder="Description"
         />
+ <div className="flex flex-col gap-2">
+  <label htmlFor="date-picker" className="text-white">Select a Date</label>
   <input
-  value={date}
-  onChange={(e) => setDate(e.target.value)}
-  className="border-2 border-white p-2 outline-none rounded-md"
-  type="date"
-  title="Click to select a date"
-/>
+    id="date-picker"
+    value={date}
+    onChange={(e) => setDate(e.target.value)}
+    className="border-2 border-white p-2 outline-none rounded-md bg-transparent text-white placeholder:text-white "
+    type="date"
+    title="Click to select a date"
+    placeholder="YYYY-MM-DD"
+  />
+</div>
+
         <select
           value={day}
           onChange={(e) => setDay(e.target.value)}
